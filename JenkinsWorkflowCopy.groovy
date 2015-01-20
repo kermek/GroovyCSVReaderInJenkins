@@ -1,4 +1,4 @@
-# This is the Jenkins Workflow script, to be copied in Workflow Script window in Jenkins Wrkflow Job
+// This is the Jenkins Workflow script, to be copied in Workflow Script window in Jenkins Wrkflow Job
 
 node {
 	git url: 'https://github.com/kermek/GroovyExcelReaderInIDEA.git'
@@ -12,12 +12,12 @@ node {
 	println 'Total line: '+ rows.size()
 
 	for (int i = 0; i < rows.size(); i++) {
-	  for (int j = 0; j < rows.get(i).size(); j++) {
-	    println 'Line #' + (i + 1) + ', Cell #' + (j+1) + ' = ' + rows.get(i)[j]
-	  }
+		for (int j = 0; j < rows.get(i).size(); j++) {
+			println 'Line #' + (i + 1) + ', Cell #' + (j+1) + ' = ' + rows.get(i)[j]
+		}
 	}
 }
 
-import com.opencsv.CSVReader
+import com.opencsv.CSVReader // OpenCSV libraries should be unppacked in .jenkins\workflow-libs at your master node!
 import com.opencsv.CSVParser // Not used
 import com.opencsv.CSVWriter // Not used
