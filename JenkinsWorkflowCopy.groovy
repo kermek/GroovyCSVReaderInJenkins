@@ -1,7 +1,7 @@
 // This is the Jenkins Workflow script, to be copied in Workflow Script window in Jenkins Wrkflow Job
 
 node {
-	git url: 'https://github.com/kermek/GroovyExcelReaderInIDEA.git'
+	git url: 'https://github.com/kermek/GroovyCSVReaderInJenkins.git'
 
 	textFile = readFile('.\\TA approach.csv') // Reading text file as a string from the node's workspace
 
